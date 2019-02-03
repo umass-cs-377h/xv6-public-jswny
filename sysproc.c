@@ -89,3 +89,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// return the address space size of the currently running program
+int 
+sys_getmysize(void)
+{
+   return myproc()->sz;
+}
